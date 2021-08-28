@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>FoodBox</title>
+
+
+    <!-aqui é css->
+    <style>
+
+        body{
+            background: lightgray;
+            font-family: "Roboto";
+        }
+
+        .topo{
+            background: #cf2b2b;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px 0 #bbbbbb;
+
+        }
+
+        .produto{
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0 0 10px 0 #bbbbbb;
+            cursor: pointer;
+            border: 5px solid white;
+        }
+
+        h1{
+            margin: 0;
+            font-family: "Righteous";
+            font-weight: normal;
+        }
+
+        h2{
+            margin: 0;
+            font-size: 18px;
+            font-weight: normal;
+
+        }
+
+        h3{
+            font-size: 30px;
+            margin-bottom: 15px;
+            font-family: "Righteous";
+            font-weight: bold;
+        }
+
+        h4{
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-size: 20px;
+
+        }
+
+        img{
+            width: 130px;
+            border-radius: 5px;
+            float: right;
+            margin-left: 15px;
+        }
+
+        p {
+            margin: 15px 0 0 0;
+        }
+
+        .preço{
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .botao {
+        background: #0b940b;
+        text-align: center;
+        padding: 15px;
+        margin-top: 30px;
+        margin-bottom: 100px;
+        border-radius: 50px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        cursor: pointer;
+        }
+     
+    </style>
+  </head>
+
+  <body>
+    <div class="topo">
+      <h1>FoodBox</h1>
+      <h2>Monte seu box e receba em 15 minutos!</h2>
+    </div>
+
+    <h3>Primeiro, seu prato</h3>
+
+    <div id="burguer" class="produto" onclick="escolherBurguer()">
+        <img 
+        src="https://i.pinimg.com/736x/d8/68/dc/d868dcc36646a649dc1898668711ef6b.jpg"
+        >
+        <h4>Hamburguer com fritas</h4>
+        <p>hambuguer grandão com batatas fritas</p>
+        <p class="preço"><strong>R$16,90</strong></p>
+        
+    </div>
+
+    <div id="hotdog" class="produto" onclick = "escolherHotdog()">
+        <img 
+        src="https://uploads.metropoles.com/wp-content/uploads/2020/05/22175533/Hot-Dog-%C3%81guas-Claras-Bacon_Easy-Resize.com-1.jpg">
+        <h4>Cachorro quente</h4>
+        <p>tem de tudo nele</p>
+        <p class="preço"><strong>R$12,50</strong></p></p>
+    </div>
+
+    <h3>Agora,sua bebida</h3>
+
+    <div id="refri" class="produto" onclick = "escolherRefri()">
+        <img src= "https://hamburgueriavital.com.br/wp-content/uploads/2020/11/refrigerantes-1280x720-1.jpg">
+        <h4>Refrigerante</h4>
+        <p>350ml</p>
+        <p class="preço"><strong>R$5,90</strong></p>
+    </div>
+
+    <div id="suco" class="produto" onclick = "escolherSuco()">
+        <img src="https://media.gazetadopovo.com.br/viver-bem/2019/06/suco-fruta-acucar-risco-morte-600x400-f107f9a0.jpg">
+        <h4>Suco de Laranja</h4>
+        <p>Fruta cultivada na terra da laranja</p>
+        <p class="preço"><strong>R$2,50</strong></p>
+    </div>
+
+    <h3>Por fim, sua sobremesa</h3>
+    <div id="pave" class ="produto" onclick = "escolherPave()">
+        <img src="https://img.itdg.com.br/tdg/images/recipes/000/015/939/354452/354452_original.jpg?mode=crop&width=710&height=400" />
+        <h4>Pavê</h4>
+        <p>É pra comer</p>
+        <p class="preço"><strong>R$4,90</strong></p>   
+    </div>
+
+    <div id= "mousse" class="produto" onclick = "escolherMousse()">
+        <img src="https://catracalivre.com.br/wp-content/thumbnails/8prK1QzqSQ6uPemLt1GhZIvS6JM=/640x360/smart/wp-content/uploads/2021/02/img-5450.jpg"/>
+        <h4>Mousse de limão</h4>
+        <p>Delicioso mousse de limão</p>
+        <p class="preço"><strong>R$4,90</strong></p>
+    </div>
+
+    <div class="botao" onclick = "finalizarPedido()">
+        Finalizar Pedido
+    </div>
+
+    <script>
+        let prato, sobremesa, bebida;
+        
+
+        //Escolher Lanche
+        function escolherBurguer(){
+            document.getElementById("burguer").style.borderColor = "green";
+            document.getElementById("hotdog").style.borderColor = "white";
+            prato = "Burguer";
+        }
+        function escolherHotdog(){
+            document.getElementById("hotdog").style.borderColor = "green";
+            document.getElementById("burguer").style.borderColor = "white";
+            prato = "HotDog";
+        }
+
+        //Escolher Bebida
+        function escolherRefri(){
+            document.getElementById("refri").style.borderColor = "green";
+            document.getElementById("suco").style.borderColor = "white";
+            bebida = "Refri";
+        }
+            
+        function escolherSuco(){
+            document.getElementById("suco").style.borderColor = "green";
+            document.getElementById("refri").style.borderColor = "white";
+            bebida = "Suco";
+        }
+
+        //Escolher Sobremesa
+        function escolherPave(){
+            document.getElementById("pave").style.borderColor = "green";
+            document.getElementById("mousse").style.borderColor = "white";
+            sobremesa = "Pave";
+        }
+
+        function escolherMousse(){
+            document.getElementById("mousse").style.borderColor = "green";
+            document.getElementById("pave").style.borderColor = "white";
+            sobremesa = "Mousse";
+        }
+
+        function finalizarPedido(){
+            alert(prato);
+            alert(bebida);
+            alert(sobremesa);
+            alert();
+            
+        }
+    </script>
+  </body>
+</html>

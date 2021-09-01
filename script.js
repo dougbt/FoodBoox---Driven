@@ -1,4 +1,4 @@
-let prato, sobremesa, bebida;
+/* let prato, sobremesa, bebida;
         
 
         //Escolher Lanche
@@ -40,7 +40,11 @@ let prato, sobremesa, bebida;
         }
 
         function finalizarPedido(){
-            alert(prato);
+
+            alert("Olá, eu gostaria de "+prato+ " um "+bebida+", "sombremesa);
+
+
+            /* alert(prato);
             alert(bebida);
-            alert(sobremesa);            
-        }
+            alert(sobremesa);    */         
+        } */

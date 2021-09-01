@@ -7,91 +7,8 @@
 
     <title>FoodBox</title>
 
-
-    <!-aqui é css->
-    <style>
-
-        body{
-            background: lightgray;
-            font-family: "Roboto";
-        }
-
-        .topo{
-            background: #cf2b2b;
-            color: white;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px 0 #bbbbbb;
-
-        }
-
-        .produto{
-            background: white;
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 10px;
-            box-shadow: 0 0 10px 0 #bbbbbb;
-            cursor: pointer;
-            border: 5px solid white;
-        }
-
-        h1{
-            margin: 0;
-            font-family: "Righteous";
-            font-weight: normal;
-        }
-
-        h2{
-            margin: 0;
-            font-size: 18px;
-            font-weight: normal;
-
-        }
-
-        h3{
-            font-size: 30px;
-            margin-bottom: 15px;
-            font-family: "Righteous";
-            font-weight: bold;
-        }
-
-        h4{
-            margin-top: 0;
-            margin-bottom: 5px;
-            font-size: 20px;
-
-        }
-
-        img{
-            width: 130px;
-            border-radius: 5px;
-            float: right;
-            margin-left: 15px;
-        }
-
-        p {
-            margin: 15px 0 0 0;
-        }
-
-        .preço{
-            font-weight: bold;
-            font-size: 18px;
-        }
-
-        .botao {
-        background: #0b940b;
-        text-align: center;
-        padding: 15px;
-        margin-top: 30px;
-        margin-bottom: 100px;
-        border-radius: 50px;
-        color: white;
-        font-weight: bold;
-        font-size: 18px;
-        cursor: pointer;
-        }
-     
-    </style>
+    <link rel="stylesheet" href="style.css">
+    
   </head>
 
   <body>
@@ -143,7 +60,7 @@
         <p>É pra comer</p>
         <p class="preço"><strong>R$4,90</strong></p>   
     </div>
-
+ 
     <div id= "mousse" class="produto" onclick = "escolherMousse()">
         <img src="https://catracalivre.com.br/wp-content/thumbnails/8prK1QzqSQ6uPemLt1GhZIvS6JM=/640x360/smart/wp-content/uploads/2021/02/img-5450.jpg"/>
         <h4>Mousse de limão</h4>
@@ -155,55 +72,7 @@
         Finalizar Pedido
     </div>
 
-    <script>
-        let prato, sobremesa, bebida;
-        
-
-        //Escolher Lanche
-        function escolherBurguer(){
-            document.getElementById("burguer").style.borderColor = "green";
-            document.getElementById("hotdog").style.borderColor = "white";
-            prato = "Burguer";
-        }
-        function escolherHotdog(){
-            document.getElementById("hotdog").style.borderColor = "green";
-            document.getElementById("burguer").style.borderColor = "white";
-            prato = "HotDog";
-        }
-
-        //Escolher Bebida
-        function escolherRefri(){
-            document.getElementById("refri").style.borderColor = "green";
-            document.getElementById("suco").style.borderColor = "white";
-            bebida = "Refri";
-        }
-            
-        function escolherSuco(){
-            document.getElementById("suco").style.borderColor = "green";
-            document.getElementById("refri").style.borderColor = "white";
-            bebida = "Suco";
-        }
-
-        //Escolher Sobremesa
-        function escolherPave(){
-            document.getElementById("pave").style.borderColor = "green";
-            document.getElementById("mousse").style.borderColor = "white";
-            sobremesa = "Pave";
-        }
-
-        function escolherMousse(){
-            document.getElementById("mousse").style.borderColor = "green";
-            document.getElementById("pave").style.borderColor = "white";
-            sobremesa = "Mousse";
-        }
-
-        function finalizarPedido(){
-            alert(prato);
-            alert(bebida);
-            alert(sobremesa);
-            alert();
-            
-        }
+    <script src= "script.js">
     </script>
   </body>
 </html>
